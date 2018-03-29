@@ -18,6 +18,8 @@ class Cart
     while @ordered_items.size > 0         # 當客戶還有書籍尚未結帳時
         
       case @ordered_items.size
+        when 4
+          total = total + 4 * PRICE * 0.85
         when 3
           total = total + 3 * PRICE * 0.90
         when 2
